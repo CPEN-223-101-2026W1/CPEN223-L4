@@ -1,44 +1,45 @@
-// Lab 3
+// Lab 4
 // Student name:
 // Student number:
 
 using System;
 using System.Collections.Generic;
 
-Console.WriteLine("CPEN223 Lab 3");
+Console.WriteLine("CPEN223 Lab 4");
 
-//Testing: Write some test cases to test well all methods you are to implement    
-//         This is to demonstrates what test cases you have considered
-//TODO 
-// bool actual = SensorAnalyzer.IsUsableReading(21.5, 0.0, 50.0);
-// Console.WriteLine($"Expected: True, Actual: {actual}");
+//Testing: Write test cases that exercise all four methods you are to implement.
+//TODO
+// Dictionary<string, int> counts = GenomeAnalyzer.CountKMers("AAAA", 2);
+// Console.WriteLine($"Expected: AA -> 3, Actual: AA -> {counts["AA"]} ({counts.Count} entries)");
+//
+// bool differ = GenomeAnalyzer.SamplesDiffer("AAAA", "TTTT", 2, 3);
+// Console.WriteLine($"Expected: True, Actual: {differ}");
 
 
 //end Testing code
 
-//Do not change the program skeleton
-public static class SensorAnalyzer
+//Do not change the program skeleton: keep the class name, method names,
+//parameters, and return types exactly as given.
+//Do not use LINQ, and do not use Console inside the GenomeAnalyzer methods.
+
+public static class GenomeAnalyzer
 {
-    public static bool IsUsableReading(
-        double reading, double minimum, double maximum)
+    public static Dictionary<string, int> CountKMers(string sequence, int k)
     {
         throw new NotImplementedException();
     }
 
-    public static List<double> CleanReadings(
-        IReadOnlyList<double> readings, double minimum, double maximum)
+    public static Dictionary<string, int> CompareProfiles(string reference, string sample, int k)
     {
         throw new NotImplementedException();
     }
 
-    public static bool ContainsApproximately(
-        IReadOnlyList<double> readings, double target, double tolerance)
+    public static List<string> MostChangedKMers(string reference, string sample, int k)
     {
         throw new NotImplementedException();
     }
 
-    public static List<double> MovingAverage(
-        IReadOnlyList<double> readings, int windowSize)
+    public static bool SamplesDiffer(string reference, string sample, int k, int threshold)
     {
         throw new NotImplementedException();
     }
